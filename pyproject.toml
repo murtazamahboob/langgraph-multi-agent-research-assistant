@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langgraph-research-assistant"
+version = "1.0.0"
+description = "Multi-agent AI research assistant built with LangChain and LangGraph: planner, researcher and writer agents that produce cited Markdown reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Murtaza Mahboob" }]
+keywords = [
+    "langgraph",
+    "langchain",
+    "multi-agent",
+    "agentic-ai",
+    "ai-agents",
+    "llm",
+    "research-assistant",
+    "python",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "langgraph==1.2.20",
+    "langchain-core==1.7.6",
+    "langchain-openai==1.7.4",
+    "ddgs==9.16.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[project.scripts]
+research-assistant = "research_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

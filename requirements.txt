@@ -1,0 +1,9 @@
+# Pinned runtime dependencies (verified working with Python 3.10+).
+# Install with:  pip install -r requirements.txt
+langgraph==1.2.20
+langchain-core==1.7.6
+langchain-openai==1.7.4
+ddgs==9.16.1
+
+# Dev / test dependency (also in pyproject.toml [project.optional-dependencies] dev).
+pytest==9.2.0
